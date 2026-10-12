@@ -1,0 +1,7 @@
+Extract this ZIP. Open the main page of your assad-hamid.github.io repository. Choose Add file > Upload files. Upload the HTML files and folders from this ZIP into the repository root, keeping folder structure. Commit directly to main.
+
+Changes: Portfolio navigation and page heading renamed Projects. The second (BRET) experience and Languages, Relevant Training, Core Strengths, Leadership & Volunteer Activities sections removed from the web pages. Concise two-bullet project summaries link to the existing detailed pages.
+
+Pictures can be added to any detailed project page. Send each image with its project name and desired caption. No new pictures were published in this update.
+
+The downloadable Word CV is unchanged; these changes apply to the website. Internal links checked; browser visual verification unavailable.
