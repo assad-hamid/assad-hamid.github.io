@@ -1,7 +1,5 @@
-Extract this ZIP and upload its website files and folders to the main page (root) of your GitHub repository using Add file > Upload files. Commit directly to main. Upload the contents, not this ZIP or its enclosing folder.
+Extract this ZIP. In your GitHub repository main page, choose Add file > Upload files. Upload all website files and folders from inside the extracted folder, preserving their folder structure. Commit directly to main.
 
-This is a complete copy of your website. Existing files with the same paths are replaced. The CV menu item and separate resume content are removed; the old /cv/ address redirects to the homepage. Your sidebar CV download remains.
+This update removes the standalone RESEARCH section, matches project-name colours to the other headings, and removes the Project summary based on my CV notes.
 
-Keep this latest ZIP as your backup. After the update is uploaded and verified, you can delete older ZIP downloads from your computer. Do not delete website files from GitHub.
-
-Local links and requested text changes checked. Browser visual verification unavailable.
+This ZIP contains the complete current website. After uploading and confirming the update, older ZIP downloads can be deleted. Do not delete your website files from GitHub.
