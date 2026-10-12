@@ -1,0 +1,8 @@
+1. Extract this ZIP.
+2. Open the main page of your assad-hamid.github.io repository.
+3. Add file > Upload files. Drag in index.html and the cv, sitemap and portfolio folders from this ZIP. Upload their contents at the repository root, not inside another folder.
+4. Commit directly to main. Wait for GitHub Pages to publish, then refresh your website.
+
+This update replaces the Metrobus Ridership project with the M-7 academic traffic feasibility study in the project lists and navigation. Its old URL now returns visitors to Portfolio. The education history and downloadable Word CV are unchanged. Source reports and screenshots are not published.
+
+Checks: local page and asset links passed. Browser visual verification was unavailable.
