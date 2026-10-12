@@ -1,0 +1,1 @@
+document.querySelectorAll('.contact-toggle').forEach(button=>button.addEventListener('click',()=>{const list=document.getElementById(button.getAttribute('aria-controls'));const open=button.getAttribute('aria-expanded')!=='true';button.setAttribute('aria-expanded',String(open));list.classList.toggle('is-open',open);}));
