@@ -1,7 +1,7 @@
-Extract this ZIP. Open the main page of your assad-hamid.github.io repository. Choose Add file > Upload files. Upload the HTML files and folders from this ZIP into the repository root, keeping folder structure. Commit directly to main.
+Extract this ZIP and upload its website files and folders to the main page (root) of your GitHub repository using Add file > Upload files. Commit directly to main. Upload the contents, not this ZIP or its enclosing folder.
 
-Changes: Portfolio navigation and page heading renamed Projects. The second (BRET) experience and Languages, Relevant Training, Core Strengths, Leadership & Volunteer Activities sections removed from the web pages. Concise two-bullet project summaries link to the existing detailed pages.
+This is a complete copy of your website. Existing files with the same paths are replaced. The CV menu item and separate resume content are removed; the old /cv/ address redirects to the homepage. Your sidebar CV download remains.
 
-Pictures can be added to any detailed project page. Send each image with its project name and desired caption. No new pictures were published in this update.
+Keep this latest ZIP as your backup. After the update is uploaded and verified, you can delete older ZIP downloads from your computer. Do not delete website files from GitHub.
 
-The downloadable Word CV is unchanged; these changes apply to the website. Internal links checked; browser visual verification unavailable.
+Local links and requested text changes checked. Browser visual verification unavailable.
