@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>U.S. Crash Severity Analysis - Assad Hamid</title>
-<meta content="Assad Hamid — civil engineer and transportation planning researcher at Dalian University of Technology. Pedestrian safety, transport equity, and infrastructure." name="description"/>
+<title>Crash Frequency and Injury Severity - Assad Hamid</title>
+<meta content="CRSS road-safety analysis using Python: collision-specific injury distributions, intersection context, and temporal crash patterns." name="description"/>
 <meta content="#FFFCF2" name="theme-color"/>
 <link href="../../assets/main.css" rel="stylesheet"/>
 <link href="../../assets/custom.css" rel="stylesheet"/>
@@ -64,30 +64,32 @@
 </div>
 </aside>
 <article class="archive crash-study" id="content">
-<p class="crash-kicker">Traffic safety · Exploratory analysis · Injury severity</p>
+<p class="crash-kicker">Road safety · Collision characteristics · Injury outcomes</p>
 <h1 class="page__title">Crash Frequency and Injury Severity in U.S. Crash Records</h1>
-<p class="meta">NHTSA Crash Report Sampling System · Python · Pandas · Seaborn · Matplotlib</p>
-<p class="crash-lead">How do collision configuration, intersection context, and time of day distinguish crash frequency from injury severity?</p>
-<p>I used Python to explore CRSS crash-, vehicle-, and person-level information, comparing the circumstances of recorded crashes with their injury outcomes. The analysis examined both event counts and within-category injury proportions to distinguish the concentration of crashes from the severity profile of those involved.</p>
-<h2>Analytical approach</h2>
-<p>The workflow used Pandas for categorical aggregation and cross-tabulation, with Seaborn and Matplotlib for comparative visualisation. CRSS imputed fields, including <code>INJSEV_IM</code>, <code>NO_INJ_IM</code>, and <code>ALCHL_IM</code>, supported the report’s injury and alcohol analyses; missing or unknown categories were handled according to each comparison.</p>
-<div class="analysis-table"><table><thead><tr><th>Analytical dimension</th><th>Comparison</th><th>Interpretation</th></tr></thead><tbody>
-<tr><td>Collision configuration</td><td>Injury proportions within collision categories</td><td>Differences in the composition of injury outcomes</td></tr>
-<tr><td>Intersection context</td><td>Recorded counts by intersection and severity category</td><td>Where the observed injury burden is concentrated</td></tr>
-<tr><td>Temporal distribution</td><td>Hourly frequencies, supported by month–hour comparisons</td><td>Recurring periods of higher recorded crash frequency</td></tr>
+<p class="meta">NHTSA Crash Report Sampling System · Python / Pandas · Seaborn / Matplotlib · Google Colab</p>
+<p class="crash-lead">How do injury outcomes vary by collision configuration, and where and when are recorded crashes concentrated?</p>
+<p>I examined police-reported crash records from NHTSA’s Crash Report Sampling System (CRSS), using categorical comparisons and temporal profiles to separate two transportation-safety questions: <strong>where crash counts concentrate</strong> and <strong>which collision types exhibit more severe injury distributions</strong>.</p>
+<div class="crash-finding"><p><strong>Principal finding.</strong> Front-to-front collisions showed a greater share of fatal and suspected serious injuries than the other displayed collision categories. Recorded crashes peaked in the late afternoon; four-way and T-intersections accounted for the largest counts among the displayed intersection types.</p></div>
+<h2>Data and analytical design</h2>
+<p>The project used the CRSS Accident, Vehicle, and Person files to examine crash circumstances and individual injury outcomes. In Google Colab, I used Pandas for categorical aggregation, cross-tabulation, and ordered category handling, and Seaborn and Matplotlib for count plots, proportional comparisons, and month–hour heatmaps.</p>
+<p>The report documents comparison-specific treatment of missing and unknown values and use of CRSS imputed fields: <code>INJSEV_IM</code> for person-level injury severity, and <code>NO_INJ_IM</code> and <code>ALCHL_IM</code> for crash-level injury counts and alcohol involvement.</p>
+<div class="analysis-table"><table><thead><tr><th>Comparison</th><th>Measure</th><th>Analytical purpose</th></tr></thead><tbody>
+<tr><td>Collision configuration</td><td>Persons in each injury category ÷ persons in that collision category</td><td>Compare severity composition using a within-category denominator</td></tr>
+<tr><td>Intersection context</td><td>Displayed counts by intersection and injury category</td><td>Locate concentrations in the observed records</td></tr>
+<tr><td>Time of occurrence</td><td>Hourly counts and month–hour cross-tabulation</td><td>Identify the daily peak and examine its recurrence across months</td></tr>
 </tbody></table></div>
-<h2>Collision configuration differentiates injury outcomes</h2>
-<p>Front-to-front collisions showed the largest proportions of fatal and suspected serious injuries among the displayed categories. Rear-to-rear and rear-to-side collisions were dominated by the “no apparent injury” category. The distinction concerns severity composition within collision types, rather than their relative frequency.</p>
-<figure class="crash-figure"><a href="../../assets/crash-severity/collision-severity.png" target="_blank" rel="noopener" aria-label="Enlarge Injury proportions by collision configuration"><img src="../../assets/crash-severity/collision-severity.png" alt="Injury proportions by collision configuration" width="2048" height="1188" loading="lazy"/></a><figcaption><strong>Collision-specific injury distributions.</strong> Proportions compare outcomes among persons within each displayed collision category.</figcaption></figure>
-<h2>Intersection burden and temporal concentration</h2>
-<p>Among intersection categories, four-way and T-intersections accounted for the largest displayed injury counts. Non-intersection locations carried the largest overall count. These comparisons identify concentrations in the analysed records without equating greater frequency with greater risk per trip.</p>
-<figure class="crash-figure"><a href="../../assets/crash-severity/intersection-severity.png" target="_blank" rel="noopener" aria-label="Enlarge Injury categories by intersection type"><img src="../../assets/crash-severity/intersection-severity.png" alt="Injury categories by intersection type" width="2048" height="1209" loading="lazy"/></a><figcaption><strong>Intersection context.</strong> The original count comparison separates non-intersection locations from named intersection configurations.</figcaption></figure>
-<p>Recorded crashes concentrated in the late afternoon, with the largest hourly count at approximately 17:00. The month–hour comparison also showed a recurring afternoon concentration, making time of day a useful dimension for describing crash occurrence.</p>
-<figure class="crash-figure"><a href="../../assets/crash-severity/hourly-frequency.png" target="_blank" rel="noopener" aria-label="Enlarge Recorded crash frequency by hour of day"><img src="../../assets/crash-severity/hourly-frequency.png" alt="Recorded crash frequency by hour of day" width="1769" height="1388" loading="lazy"/></a><figcaption><strong>Daily timing.</strong> The hourly profile shows a pronounced late-afternoon peak in the analysed records.</figcaption></figure>
-<h2>Implications for safety analysis</h2>
-<p>The findings motivate complementary priorities: collision-specific severity assessment, closer examination of injury concentrations at common intersection types, and time-sensitive investigation of crash occurrence. Together, they provide an empirical basis for selecting questions for subsequent site-level assessment and exposure-adjusted modelling.</p>
-<p class="crash-scope"><strong>Analytical scope.</strong> These are descriptive patterns in the project’s analysed records. National estimates require CRSS survey weights; comparative risk and causal effects require additional exposure data and modelling.</p>
-<p class="crash-source">Source: NHTSA CRSS; variable interpretation checked against the <em>CRSS Analytical User’s Manual, 2016–2023</em>. Figures are original project outputs. Select any figure to enlarge.</p>
+<h2>Collision configuration and injury severity</h2>
+<p>Front-to-front collisions had the largest fatal and suspected serious injury proportions among the displayed categories. Rear-to-rear and rear-to-side collisions were predominantly classified as “no apparent injury.” This comparison identifies differences in <strong>conditional injury distributions</strong>; it does not establish which collision type occurs most frequently.</p>
+<figure class="crash-figure"><a href="../../assets/crash-severity/collision-severity.png" target="_blank" rel="noopener" aria-label="Enlarge: Injury proportions within collision categories"><img src="../../assets/crash-severity/collision-severity.png" alt="Injury proportions within collision categories" width="2048" height="1188" loading="lazy"/></a><figcaption><strong>Figure 1.</strong> Within-category proportions distinguish the severity profile of a collision type from how frequently it occurs.</figcaption></figure>
+<h2>Spatial context and time of occurrence</h2>
+<p>Four-way and T-intersections contributed the largest recorded counts among intersection configurations, while non-intersection locations accounted for the largest overall count. This pattern identifies contexts for further investigation; comparing safety performance between intersection designs would also require traffic exposure and site characteristics.</p>
+<figure class="crash-figure"><a href="../../assets/crash-severity/intersection-severity.png" target="_blank" rel="noopener" aria-label="Enlarge: Recorded injury categories by intersection type"><img src="../../assets/crash-severity/intersection-severity.png" alt="Recorded injury categories by intersection type" width="2048" height="1209" loading="lazy"/></a><figcaption><strong>Figure 2.</strong> Four-way and T-intersections dominate the displayed intersection counts; non-intersection records are shown separately.</figcaption></figure>
+<p>The hourly profile showed a pronounced late-afternoon concentration, reaching its maximum at <strong>17:00</strong>. The month–hour heatmap also showed recurring afternoon concentrations. Together, these outputs indicate a persistent time-of-day pattern rather than an isolated monthly peak.</p>
+<figure class="crash-figure"><a href="../../assets/crash-severity/hourly-frequency.png" target="_blank" rel="noopener" aria-label="Enlarge: Recorded crashes by hour of day"><img src="../../assets/crash-severity/hourly-frequency.png" alt="Recorded crashes by hour of day" width="1769" height="1388" loading="lazy"/></a><figcaption><strong>Figure 3.</strong> The hourly distribution peaks at 17:00. Counts describe occurrence in the analysed records, not exposure-adjusted risk.</figcaption></figure>
+<h2>Transportation-safety interpretation</h2>
+<p>The analysis distinguishes a severity-focused question—why front-to-front configurations have a more adverse injury profile—from a frequency-focused question—why recorded crashes cluster at particular locations and times. These findings frame subsequent investigation of opposing-direction conflicts, intersection operating conditions, and time-dependent traffic exposure. They support selecting questions for detailed safety assessment, rather than prescribing an intervention from counts alone.</p>
+<p class="crash-scope"><strong>Scope.</strong> Descriptive analysis of the project’s CRSS records. National totals require survey weighting; comparative risk requires exposure denominators. The project does not estimate causal effects or fitted injury-severity models.</p>
+<p class="crash-source">Sources: original project report and figures; NHTSA <em>CRSS Analytical User’s Manual, 2016–2023</em> for variable definitions. Three selected original figures are shown; select a figure to inspect it at full resolution.</p>
 <nav class="pagination" aria-label="Project navigation"><a href="../../portfolio/">All projects</a> · <a href="../../portfolio/metrobus-accessibility/">Previous</a> · <a href="../../portfolio/m7-motorway/">Next</a></nav>
 </article>
 </main>

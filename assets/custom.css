@@ -81,3 +81,6 @@ body.project-page,body.project-page .masthead,body.project-page .greedy-nav,body
 .motorway-study .motorway-scope{font-size:.78em;line-height:1.6;border-left:2px solid #9bb69f;padding:.8em 1em}
 .motorway-study .motorway-source{font-size:.7em;color:#5e6e61;line-height:1.6}
 .motorway-study .motorway-figure a:focus-visible{display:block;outline:3px solid #43879c;outline-offset:3px}
+
+/* Key crash-study result */
+.crash-study .crash-finding{border-top:1px solid #d9cba4;border-bottom:1px solid #d9cba4;padding:1em 0;margin:1.4em 0;color:#605a4b;font-size:.92em;line-height:1.65}.crash-study .crash-finding p{margin:0}
