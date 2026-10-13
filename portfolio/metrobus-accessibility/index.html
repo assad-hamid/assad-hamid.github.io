@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Metrobus Accessibility &amp;amp; Transport Equity Analysis - Assad Hamid</title>
-<meta content="Assad Hamid — civil engineer and transportation planning researcher at Dalian University of Technology. Pedestrian safety, transport equity, and infrastructure." name="description"/>
-<meta content="#F3F8FC" name="theme-color"/>
-<link href="../../assets/main.css" rel="stylesheet"/>
-<link href="../../assets/custom.css" rel="stylesheet"/>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Metrobus Accessibility &amp; Transport Equity Analysis - Assad Hamid</title>
+<meta content="Assad Hamid — civil engineer and transportation planning researcher at Dalian University of Technology. Pedestrian safety, transport equity, and infrastructure." name="description">
+<meta content="#F3F8FC" name="theme-color">
+<link href="../../assets/main.css" rel="stylesheet">
+<link href="../../assets/custom.css" rel="stylesheet">
 <style>.project-figure{margin:1.5em 0}.project-figure img{display:block;max-width:100%;height:auto}.project-figure figcaption{margin-top:.5em;font-size:.8em;color:#7a8288}</style>
 </head>
 <body class="project-page project-metrobus-accessibility">
@@ -32,11 +31,11 @@
 <main id="main">
 <aside aria-label="About Assad Hamid" class="sidebar sticky">
 <div class="author__avatar">
-<img alt="Assad Hamid" height="175" src="../../assets/profile.jpeg" width="175"/>
+<img alt="Assad Hamid" height="175" src="../../assets/profile.jpeg" width="175">
 </div>
 <div class="author__content">
 <h3 class="author__name">About Me</h3>
-<p class="author__bio">Civil Engineer<br/>Transportation Planning &amp; Management</p>
+<p class="author__bio">Civil Engineer<br>Transportation Planning &amp; Management</p>
 </div>
 <div class="author__urls-wrapper">
 <button aria-controls="contact-links" aria-expanded="false" class="btn btn--inverse contact-toggle">Follow</button>
@@ -63,20 +62,32 @@
 </ul>
 </div>
 </aside>
-<article class="archive" id="content">
-<h1 class="page__title">Metrobus Accessibility &amp; Transport Equity Analysis</h1>
-<p class="meta">QGIS · OpenStreetMap · WorldPop</p>
-<h2>Research question</h2>
-<p>How equitably does mass transit serve Islamabad’s population, particularly low-income communities?</p>
-<h2>My contribution</h2>
-<p>Integrated open transit and population data to map service coverage and identify underserved communities.</p>
-<h2>Methods</h2>
-<p>Combined OpenStreetMap transit data and 100 m WorldPop population rasters in QGIS, using 500 m and 1 km service buffers and 15-minute walking isochrones.</p>
-<h2>Key findings</h2>
-<p>The analysis estimated that 28.1% of the metropolitan population was within 1 km of transit and that 82% of mapped low-income residents were underserved. These results highlight gaps in spatial access to transit.</p>
-<nav aria-label="Project navigation" class="pagination">
-<a href="../../portfolio/">All projects</a> · <a href="../../portfolio/crash-severity/">Next</a>
-</nav>
+<article class="archive metro-study" id="content">
+<p class="study-kicker">Public transport · Spatial accessibility · Distributional equity</p>
+<h1 class="page__title">Metrobus Accessibility &amp; Transport Equity in Islamabad</h1>
+<p class="meta">QGIS · OpenStreetMap · WorldPop · OpenRouteService</p>
+<p class="study-lead">A GIS-based assessment of how Metrobus station coverage aligns with population distribution and low-income settlements in Islamabad.</p>
+<p>I integrated station locations, gridded population data, and digitised settlement boundaries to examine the distribution of access to the Metrobus network. The analysis combined population coverage estimates with settlement-level mapping to identify gaps in station proximity and priorities for first- and last-mile connections.</p>
+<figure class="study-figure">
+<a href="../../assets/metrobus/population-and-settlements.png" target="_blank" rel="noopener" aria-label="Open population and settlement map at full size"><img src="../../assets/metrobus/population-and-settlements.png" alt="Islamabad population raster with Metrobus station points and mapped low-income settlement polygons" width="2048" height="1448" fetchpriority="high"></a>
+<figcaption><strong>Population distribution and transit provision.</strong> Red shading represents the population raster; blue-grey points mark Metrobus stations, and green polygons identify the low-income settlements mapped in the study.</figcaption>
+</figure>
+<h2>Spatial accessibility</h2>
+<p>The QGIS workflow combined OpenStreetMap station locations, 100 m WorldPop population data, and low-income settlement polygons digitised using satellite imagery and secondary sources. Station buffers at 500 m and 1 km were overlaid with the population raster, and zonal statistics were used to estimate the population within each threshold. A complementary 15-minute walking-isochrone analysis used OpenRouteService to examine network-based access.</p>
+<div class="coverage-results" aria-label="Population coverage reported in the study">
+<p><strong>6.9%</strong><span>Population within 500 m station buffers</span></p>
+<p><strong>28.1%</strong><span>Population within 1 km station buffers</span></p>
+</div>
+<p class="coverage-note">Coverage estimates reported for the study area. Buffer distances measure spatial proximity to stations; walking isochrones account for the street network.</p>
+<div class="map-comparison">
+<figure class="study-figure"><a href="../../assets/metrobus/station-buffer-500m.png" target="_blank" rel="noopener" aria-label="Open 500 metre buffer map at full size"><img src="../../assets/metrobus/station-buffer-500m.png" alt="500 metre station buffers overlaid on population and low-income settlement areas" width="2048" height="1448" loading="lazy"></a><figcaption><strong>500 m station buffers.</strong> The tighter threshold shows the concentration of station-proximity coverage along the corridor.</figcaption></figure>
+<figure class="study-figure"><a href="../../assets/metrobus/station-buffer-1km.png" target="_blank" rel="noopener" aria-label="Open 1 kilometre buffer map at full size"><img src="../../assets/metrobus/station-buffer-1km.png" alt="1 kilometre station buffers with mapped low-income areas beyond the buffers highlighted in blue" width="2048" height="1448" loading="lazy"></a><figcaption><strong>1 km station buffers.</strong> The wider threshold extends coverage while leaving several mapped low-income areas beyond the buffers, highlighted in blue.</figcaption></figure>
+</div>
+<p class="map-source">Maps from the original project. Population data: WorldPop; station data and basemap: OpenStreetMap contributors. Select a map to inspect it at full size.</p>
+<h2>Equity implications</h2>
+<p>The overlays indicate a spatial mismatch between station coverage and several densely populated or low-income areas. Comparing the two distance thresholds shows that wider catchments increase aggregate coverage but leave substantial gaps beyond the corridor.</p>
+<p>The study used these patterns to identify priorities for feeder connections, pedestrian access improvements, and equity-sensitive service planning. Its central planning implication is to assess transit investment through the distribution of access across communities, alongside overall network coverage.</p>
+<nav class="pagination" aria-label="Project navigation"><a href="../../portfolio/">All projects</a> · <a href="../../portfolio/crash-severity/">Next project →</a></nav>
 </article>
 </main>
 <footer class="page__footer">
@@ -98,7 +109,7 @@
 <div class="page__footer-copyright">© 2026 Assad Hamid. Design based on <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/">Minimal Mistakes</a>.</div>
 </div>
 </footer>
-<script defer="" src="../../assets/site.js">
+<script defer src="../../assets/site.js">
 </script>
 </body>
 </html>

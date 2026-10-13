@@ -35,3 +35,19 @@ body.project-metrobus-accessibility{--project-background:#F3F8FC}
 body.project-crash-severity{--project-background:#FFFCF2}
 body.project-m7-motorway{--project-background:#F3F8F3}
 body.project-page,body.project-page .masthead,body.project-page .greedy-nav,body.project-page .page__footer,body.project-page .author__urls{background-color:var(--project-background)}
+
+/* Metrobus study: evidence-led project presentation */
+.metro-study .study-kicker{font-size:.7em;letter-spacing:.08em;text-transform:uppercase;color:#547686;margin:0 0 .8em}
+.metro-study .study-lead{font-size:1.12em;line-height:1.6;color:#4b606a;margin:1.2em 0}
+.metro-study .study-figure{margin:1.8em 0}
+.metro-study .study-figure img{display:block;width:100%;height:auto;border:1px solid #dce7ed;border-radius:3px}
+.metro-study .study-figure figcaption{font-size:.75em;line-height:1.6;color:#586970;margin-top:.65em}
+.metro-study .coverage-results{display:grid;grid-template-columns:1fr 1fr;gap:1.5em;border-top:1px solid #cbdce5;border-bottom:1px solid #cbdce5;padding:1.1em 0;margin:1.4em 0 .5em}
+.metro-study .coverage-results p{margin:0}
+.metro-study .coverage-results strong{display:block;font-size:1.8em;font-weight:600;color:#315e72}
+.metro-study .coverage-results span{display:block;font-size:.75em;margin-top:.3em}
+.metro-study .coverage-note,.metro-study .map-source{font-size:.7em;color:#586970;line-height:1.6}
+.metro-study .map-comparison{display:grid;grid-template-columns:1fr 1fr;gap:1.2em}
+.metro-study .map-comparison .study-figure{margin:1.4em 0 .5em}
+.metro-study .study-figure a:focus-visible{display:block;outline:3px solid #43879c;outline-offset:3px}
+@media(max-width:650px){.metro-study .map-comparison{grid-template-columns:1fr}.metro-study .coverage-results{gap:.8em}.metro-study .coverage-results strong{font-size:1.5em}}
