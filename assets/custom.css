@@ -29,3 +29,9 @@ html{height:100%}body{min-height:100vh;display:flex;flex-direction:column;paddin
 }
 @media(max-width:1100px){.education-row{flex-wrap:wrap}.education-date{margin-left:auto}}
 @media(max-width:925px){.greedy-nav .masthead__menu-item--lg{width:auto;margin:0}.greedy-nav .visible-links{gap:1.8rem}.greedy-nav .visible-links a{margin:0}.education-row{display:block}.education-date{display:block;text-align:left;margin-top:.2em}.research-topics{gap:.5rem .8rem}}
+
+/* Individual project page backgrounds */
+body.project-metrobus-accessibility{--project-background:#F3F8FC}
+body.project-crash-severity{--project-background:#FFFCF2}
+body.project-m7-motorway{--project-background:#F3F8F3}
+body.project-page,body.project-page .masthead,body.project-page .greedy-nav,body.project-page .page__footer,body.project-page .author__urls{background-color:var(--project-background)}
