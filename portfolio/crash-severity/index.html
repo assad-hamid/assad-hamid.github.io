@@ -63,20 +63,32 @@
 </ul>
 </div>
 </aside>
-<article class="archive" id="content">
-<h1 class="page__title">U.S. Crash Severity Analysis</h1>
-<p class="meta">Python · NHTSA CRSS, 2016–2023</p>
-<h2>Research question</h2>
-<p>Which crash, road-user, and environmental characteristics are associated with injury severity?</p>
-<h2>My contribution</h2>
-<p>Analyzed crash-, vehicle-, and person-level NHTSA CRSS records for 2016–2023 using Python and developed safety recommendations.</p>
-<h2>Methods</h2>
-<p>Examined severity patterns across intersection types, collision configurations, environmental conditions, and road-user characteristics.</p>
-<h2>Key findings</h2>
-<p>The analysis identified greater severity in front-to-front collisions and an increased injury burden in alcohol-related crashes. Recommendations addressed intersection improvements, enforcement, and speed management. These are descriptive associations, not estimates of causal effects.</p>
-<nav aria-label="Project navigation" class="pagination">
-<a href="../../portfolio/">All projects</a> · <a href="../../portfolio/metrobus-accessibility/">Previous</a> · <a href="../../portfolio/m7-motorway/">Next</a>
-</nav>
+<article class="archive crash-study" id="content">
+<p class="crash-kicker">Traffic safety · Exploratory analysis · Injury severity</p>
+<h1 class="page__title">Crash Frequency and Injury Severity in U.S. Crash Records</h1>
+<p class="meta">NHTSA Crash Report Sampling System · Python · Pandas · Seaborn · Matplotlib</p>
+<p class="crash-lead">How do collision configuration, intersection context, and time of day distinguish crash frequency from injury severity?</p>
+<p>I used Python to explore CRSS crash-, vehicle-, and person-level information, comparing the circumstances of recorded crashes with their injury outcomes. The analysis examined both event counts and within-category injury proportions to distinguish the concentration of crashes from the severity profile of those involved.</p>
+<h2>Analytical approach</h2>
+<p>The workflow used Pandas for categorical aggregation and cross-tabulation, with Seaborn and Matplotlib for comparative visualisation. CRSS imputed fields, including <code>INJSEV_IM</code>, <code>NO_INJ_IM</code>, and <code>ALCHL_IM</code>, supported the report’s injury and alcohol analyses; missing or unknown categories were handled according to each comparison.</p>
+<div class="analysis-table"><table><thead><tr><th>Analytical dimension</th><th>Comparison</th><th>Interpretation</th></tr></thead><tbody>
+<tr><td>Collision configuration</td><td>Injury proportions within collision categories</td><td>Differences in the composition of injury outcomes</td></tr>
+<tr><td>Intersection context</td><td>Recorded counts by intersection and severity category</td><td>Where the observed injury burden is concentrated</td></tr>
+<tr><td>Temporal distribution</td><td>Hourly frequencies, supported by month–hour comparisons</td><td>Recurring periods of higher recorded crash frequency</td></tr>
+</tbody></table></div>
+<h2>Collision configuration differentiates injury outcomes</h2>
+<p>Front-to-front collisions showed the largest proportions of fatal and suspected serious injuries among the displayed categories. Rear-to-rear and rear-to-side collisions were dominated by the “no apparent injury” category. The distinction concerns severity composition within collision types, rather than their relative frequency.</p>
+<figure class="crash-figure"><a href="../../assets/crash-severity/collision-severity.png" target="_blank" rel="noopener" aria-label="Enlarge Injury proportions by collision configuration"><img src="../../assets/crash-severity/collision-severity.png" alt="Injury proportions by collision configuration" width="2048" height="1188" loading="lazy"/></a><figcaption><strong>Collision-specific injury distributions.</strong> Proportions compare outcomes among persons within each displayed collision category.</figcaption></figure>
+<h2>Intersection burden and temporal concentration</h2>
+<p>Among intersection categories, four-way and T-intersections accounted for the largest displayed injury counts. Non-intersection locations carried the largest overall count. These comparisons identify concentrations in the analysed records without equating greater frequency with greater risk per trip.</p>
+<figure class="crash-figure"><a href="../../assets/crash-severity/intersection-severity.png" target="_blank" rel="noopener" aria-label="Enlarge Injury categories by intersection type"><img src="../../assets/crash-severity/intersection-severity.png" alt="Injury categories by intersection type" width="2048" height="1209" loading="lazy"/></a><figcaption><strong>Intersection context.</strong> The original count comparison separates non-intersection locations from named intersection configurations.</figcaption></figure>
+<p>Recorded crashes concentrated in the late afternoon, with the largest hourly count at approximately 17:00. The month–hour comparison also showed a recurring afternoon concentration, making time of day a useful dimension for describing crash occurrence.</p>
+<figure class="crash-figure"><a href="../../assets/crash-severity/hourly-frequency.png" target="_blank" rel="noopener" aria-label="Enlarge Recorded crash frequency by hour of day"><img src="../../assets/crash-severity/hourly-frequency.png" alt="Recorded crash frequency by hour of day" width="1769" height="1388" loading="lazy"/></a><figcaption><strong>Daily timing.</strong> The hourly profile shows a pronounced late-afternoon peak in the analysed records.</figcaption></figure>
+<h2>Implications for safety analysis</h2>
+<p>The findings motivate complementary priorities: collision-specific severity assessment, closer examination of injury concentrations at common intersection types, and time-sensitive investigation of crash occurrence. Together, they provide an empirical basis for selecting questions for subsequent site-level assessment and exposure-adjusted modelling.</p>
+<p class="crash-scope"><strong>Analytical scope.</strong> These are descriptive patterns in the project’s analysed records. National estimates require CRSS survey weights; comparative risk and causal effects require additional exposure data and modelling.</p>
+<p class="crash-source">Source: NHTSA CRSS; variable interpretation checked against the <em>CRSS Analytical User’s Manual, 2016–2023</em>. Figures are original project outputs. Select any figure to enlarge.</p>
+<nav class="pagination" aria-label="Project navigation"><a href="../../portfolio/">All projects</a> · <a href="../../portfolio/metrobus-accessibility/">Previous</a> · <a href="../../portfolio/m7-motorway/">Next</a></nav>
 </article>
 </main>
 <footer class="page__footer">

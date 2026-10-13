@@ -51,3 +51,33 @@ body.project-page,body.project-page .masthead,body.project-page .greedy-nav,body
 .metro-study .map-comparison .study-figure{margin:1.4em 0 .5em}
 .metro-study .study-figure a:focus-visible{display:block;outline:3px solid #43879c;outline-offset:3px}
 @media(max-width:650px){.metro-study .map-comparison{grid-template-columns:1fr}.metro-study .coverage-results{gap:.8em}.metro-study .coverage-results strong{font-size:1.5em}}
+
+/* Crash study: concise technical narrative and medium-sized figures */
+.crash-study .crash-kicker{font-size:.7em;letter-spacing:.08em;text-transform:uppercase;color:#806c3e;margin:0 0 .8em}
+.crash-study .crash-lead{font-size:1.13em;line-height:1.6;color:#605a4b;margin:1.2em 0}
+.crash-study .analysis-table{overflow-x:auto;margin:1.4em 0}
+.crash-study table{width:100%;font-size:.77em;border-collapse:collapse}
+.crash-study th,.crash-study td{padding:.8em;text-align:left;vertical-align:top;border-bottom:1px solid #e2ddcf}
+.crash-study th{background:#f4eedc;font-weight:600}
+.crash-study .crash-figure{width:100%;max-width:580px;margin:1.6em auto 2em}
+.crash-study .crash-figure img{display:block;width:100%;height:auto;border:1px solid #e3dfd4;border-radius:3px;background:#fff}
+.crash-study .crash-figure figcaption{font-size:.72em;color:#686357;line-height:1.6;margin-top:.65em}
+.crash-study .crash-figure a:focus-visible{display:block;outline:3px solid #43879c;outline-offset:3px}
+.crash-study .crash-scope{font-size:.78em;padding:.9em 1em;border-left:2px solid #cbb879;line-height:1.6;margin-top:1.5em}
+.crash-study .crash-source{font-size:.7em;color:#686357;line-height:1.6}
+.crash-study code{font-size:.85em;overflow-wrap:anywhere}
+
+/* Motorway assessment */
+.motorway-study .motorway-kicker{font-size:.7em;letter-spacing:.08em;text-transform:uppercase;color:#51705b;margin:0 0 .8em}
+.motorway-study .motorway-location{font-size:1em;color:#53685a;margin:.7em 0}
+.motorway-study .motorway-lead{font-size:1.13em;line-height:1.6;color:#425d4c;margin:1.2em 0}
+.motorway-study .motorway-figure{max-width:640px;width:100%;margin:1.6em auto 2em}
+.motorway-study .motorway-figure img{display:block;width:100%;height:auto;background:white;border:1px solid #dce5dc;border-radius:3px}
+.motorway-study .motorway-figure figcaption{font-size:.73em;line-height:1.6;color:#5e6e61;margin-top:.65em}
+.motorway-study .motorway-table{overflow-x:auto;margin:1.5em 0}
+.motorway-study table{width:100%;font-size:.78em;border-collapse:collapse}
+.motorway-study th,.motorway-study td{padding:.8em;text-align:left;border-bottom:1px solid #d5e0d6}
+.motorway-study th{background:#e9f0e9}.motorway-study caption{text-align:left;font-weight:600;margin-bottom:.6em}
+.motorway-study .motorway-scope{font-size:.78em;line-height:1.6;border-left:2px solid #9bb69f;padding:.8em 1em}
+.motorway-study .motorway-source{font-size:.7em;color:#5e6e61;line-height:1.6}
+.motorway-study .motorway-figure a:focus-visible{display:block;outline:3px solid #43879c;outline-offset:3px}
