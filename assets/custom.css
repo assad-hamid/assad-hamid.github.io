@@ -4,3 +4,28 @@ html{height:100%}body{min-height:100vh;display:flex;flex-direction:column;paddin
 .author__urls a{white-space:normal;overflow-wrap:anywhere}
 
 .academic-subtitle{font-size:1.05em;color:#646c72;margin-top:.4em}.academic-intro{margin:1.2em 0 2em;max-width:48em}.archive>h2{padding-bottom:.35em;border-bottom:1px solid #eee}.project-entry{margin:1.5em 0 2em}
+
+/* Refined resume layout */
+.research-topics{display:flex;flex-wrap:wrap;gap:.45rem 1.1rem;list-style:none;padding:0;margin:1.15em 0 1.8em;font-size:.82em;color:#646c72}
+.research-topics li{margin:0;padding-left:.7rem;border-left:2px solid #c7dce2;line-height:1.5}
+.education-row{display:flex;align-items:baseline;justify-content:space-between;gap:.6rem 1rem;margin-top:.15em}
+.education-row>span:first-child{min-width:0;font-size:.88em}
+.education-date{flex-shrink:0;text-align:right;white-space:nowrap}
+.project-compact{margin:1.1em 0 1.4em}
+.project-compact h3{font-size:1em;margin:0 0 .3em;font-weight:600}
+.project-compact .meta{margin:.2em 0 .4em}
+.project-compact ul{font-size:.9em;margin:.3em 0;padding-left:1.2em}
+.archive a.project-detail-icon{display:inline-flex;align-items:center;justify-content:center;width:1.6em;height:1.6em;margin-left:.3em;border:1px solid #d5e1e5;border-radius:50%;text-decoration:none;font-size:.75em;font-weight:400;vertical-align:middle;color:#43879c}
+.archive a.project-detail-icon:hover,.archive a.project-detail-icon:focus-visible{background:#eaf2f5;border-color:#43879c;outline:2px solid transparent}
+@media(min-width:926px){
+#main,.masthead__inner-wrap{max-width:1280px}
+#main{display:grid;grid-template-columns:200px minmax(0,1fr);column-gap:50px}
+#main::after{display:none}
+#main>.sidebar{width:auto;float:none;margin:0}
+#main>.archive{width:auto;float:none;padding-left:0;margin:0;min-width:0}
+.greedy-nav .visible-links{display:grid;grid-template-columns:200px minmax(0,1fr);column-gap:50px}
+.greedy-nav .visible-links li{margin:0}
+.greedy-nav .visible-links li a{margin-left:0;margin-right:0}
+}
+@media(max-width:1100px){.education-row{flex-wrap:wrap}.education-date{margin-left:auto}}
+@media(max-width:925px){.greedy-nav .masthead__menu-item--lg{width:auto;margin:0}.greedy-nav .visible-links{gap:1.8rem}.greedy-nav .visible-links a{margin:0}.education-row{display:block}.education-date{display:block;text-align:left;margin-top:.2em}.research-topics{gap:.5rem .8rem}}
