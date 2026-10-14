@@ -1,76 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Crash Frequency and Injury Severity - Assad Hamid</title><meta name="description" content="CRSS road-safety analysis using Python: collision-specific injury distributions, intersection context, and temporal crash patterns."><meta name="theme-color" content="#fdfcfa"><meta property="og:title" content="Crash Frequency and Injury Severity - Assad Hamid"><meta property="og:type" content="website"><link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="../../assets/editorial.css"></head>
+<body><a class="skip-link" href="#content">Skip to content</a><header class="site-header"><div class="site-header__inner"><a class="site-brand" href="../../index.html">Assad Hamid</a><nav class="site-nav" aria-label="Main navigation"><a href="../../index.html">Résumé</a><a href="../../portfolio/" aria-current="page">Projects</a></nav></div></header><main id="content" class="site-main site-main--article"><div class="page-heading"><div class="breadcrumb"><a href="../../portfolio/">Projects</a> / <span>Crash Frequency and Injury Severity in U.S. Crash Records</span></div><p class="crash-kicker">Road safety · Collision characteristics · Injury outcomes</p><h1 class="page-title">Crash Frequency and Injury Severity in U.S. Crash Records</h1></div><article class="article-content">
 
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Crash Frequency and Injury Severity - Assad Hamid</title>
-<meta content="CRSS road-safety analysis using Python: collision-specific injury distributions, intersection context, and temporal crash patterns." name="description"/>
-<meta content="#FFFCF2" name="theme-color"/>
-<link href="../../assets/main.css" rel="stylesheet"/>
-<link href="../../assets/custom.css" rel="stylesheet"/>
-<style>.project-figure{margin:1.5em 0}.project-figure img{display:block;max-width:100%;height:auto}.project-figure figcaption{margin-top:.5em;font-size:.8em;color:#7a8288}</style>
-</head>
-<body class="project-page project-crash-severity">
-<a class="skip-link" href="#content">Skip to content</a>
-<header class="masthead">
-<div class="masthead__inner-wrap">
-<div class="masthead__menu">
-<nav aria-label="Main navigation" class="greedy-nav">
-<ul class="visible-links">
-<li class="masthead__menu-item masthead__menu-item--lg">
-<a href="../../">Résumé</a>
-</li>
-<li class="masthead__menu-item">
-<a href="../../portfolio/">Projects</a>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</header>
-<main id="main">
-<aside aria-label="About Assad Hamid" class="sidebar sticky">
-<div class="author__avatar">
-<img alt="Assad Hamid" height="175" src="../../assets/profile.jpeg" width="175"/>
-</div>
-<div class="author__content">
-<h3 class="author__name">About Me</h3>
-<p class="author__bio">Civil Engineer<br/>Transportation Planning &amp; Management</p>
-</div>
-<div class="author__urls-wrapper">
-<button aria-controls="contact-links" aria-expanded="false" class="btn btn--inverse contact-toggle">Follow</button>
-<ul class="author__urls social-icons" id="contact-links">
-<li>
-<span aria-hidden="true" class="icon">⌖</span> Dalian, China</li>
-<li>
-<a href="mailto:assadhamid98@gmail.com">
-<span aria-hidden="true" class="icon">✉</span> assadhamid98@gmail.com</a>
-</li>
 
-<li>
-<a download="" href="../../assets/Assad_Hamid_CV.pdf">
-<span aria-hidden="true" class="icon">↓</span> Download CV (PDF)</a>
-</li>
-<li>
-<a href="https://www.linkedin.com/in/assad-hamid/">
-<span aria-hidden="true" class="icon">↗</span> LinkedIn</a>
-</li>
-<li>
-<a href="https://orcid.org/0009-0007-1232-3308">
-<span aria-hidden="true" class="icon">↗</span> ORCID</a>
-</li>
-</ul>
-</div>
-</aside>
-<article class="archive crash-study" id="content">
-<p class="crash-kicker">Road safety · Collision characteristics · Injury outcomes</p>
-<h1 class="page__title">Crash Frequency and Injury Severity in U.S. Crash Records</h1>
 <p class="meta">NHTSA Crash Report Sampling System, 2016–2023 · Python / Pandas · Seaborn / Matplotlib · Google Colab</p>
 <p class="crash-lead">How do injury outcomes vary by collision configuration, and where and when are recorded crashes concentrated?</p>
 <p>I examined police-reported crash records from NHTSA’s Crash Report Sampling System (CRSS), using categorical comparisons and temporal profiles to separate two transportation-safety questions: <strong>where crash counts concentrate</strong> and <strong>which collision types exhibit more severe injury distributions</strong>.</p>
 <div class="crash-finding"><p><strong>Principal finding.</strong> Front-to-front collisions showed a greater share of fatal and suspected serious injuries than the other displayed collision categories. Recorded crashes peaked in the late afternoon; four-way and T-intersections accounted for the largest counts among the displayed intersection types.</p></div>
-<h2>Data and analytical design</h2>
+<h2 id="section-1">Data and analytical design</h2>
 <p>The project used the CRSS Accident, Vehicle, and Person files to examine crash circumstances and individual injury outcomes. In Google Colab, I used Pandas for categorical aggregation, cross-tabulation, and ordered category handling, and Seaborn and Matplotlib for count plots, proportional comparisons, and month–hour heatmaps.</p>
 <p>The report documents comparison-specific treatment of missing and unknown values and use of CRSS imputed fields: <code>INJSEV_IM</code> for person-level injury severity, and <code>NO_INJ_IM</code> and <code>ALCHL_IM</code> for crash-level injury counts and alcohol involvement.</p>
 <div class="analysis-table"><table><thead><tr><th>Comparison</th><th>Measure</th><th>Analytical purpose</th></tr></thead><tbody>
@@ -78,44 +15,20 @@
 <tr><td>Intersection context</td><td>Displayed counts by intersection and injury category</td><td>Locate concentrations in the observed records</td></tr>
 <tr><td>Time of occurrence</td><td>Hourly counts and month–hour cross-tabulation</td><td>Identify the daily peak and examine its recurrence across months</td></tr>
 </tbody></table></div>
-<h2>Collision configuration and injury severity</h2>
+<h2 id="section-2">Collision configuration and injury severity</h2>
 <p>Front-to-front collisions had the largest fatal and suspected serious injury proportions among the displayed categories. Rear-to-rear and rear-to-side collisions were predominantly classified as “no apparent injury.” This comparison identifies differences in <strong>conditional injury distributions</strong>; it does not establish which collision type occurs most frequently.</p>
-<figure class="crash-figure"><a href="../../assets/crash-severity/collision-severity.png" target="_blank" rel="noopener" aria-label="Enlarge: Injury proportions within collision categories"><img src="../../assets/crash-severity/collision-severity.png" alt="Injury proportions within collision categories" width="2048" height="1188" loading="lazy"/></a><figcaption><strong>Figure 1.</strong> Within-category proportions distinguish the severity profile of a collision type from how frequently it occurs.</figcaption></figure>
-<h2>Spatial context and time of occurrence</h2>
+<figure class="crash-figure"><a aria-label="Enlarge: Injury proportions within collision categories" href="../../assets/crash-severity/collision-severity.png" rel="noopener" target="_blank"><img alt="Injury proportions within collision categories" height="1188" loading="lazy" src="../../assets/crash-severity/collision-severity.png" width="2048"/></a><figcaption><strong>Figure 1.</strong> Within-category proportions distinguish the severity profile of a collision type from how frequently it occurs.</figcaption></figure>
+<h2 id="section-3">Spatial context and time of occurrence</h2>
 <p>Four-way and T-intersections contributed the largest recorded counts among intersection configurations, while non-intersection locations accounted for the largest overall count. This pattern identifies contexts for further investigation; comparing safety performance between intersection designs would also require traffic exposure and site characteristics.</p>
-<figure class="crash-figure"><a href="../../assets/crash-severity/intersection-severity.png" target="_blank" rel="noopener" aria-label="Enlarge: Recorded injury categories by intersection type"><img src="../../assets/crash-severity/intersection-severity.png" alt="Recorded injury categories by intersection type" width="2048" height="1209" loading="lazy"/></a><figcaption><strong>Figure 2.</strong> Four-way and T-intersections dominate the displayed intersection counts; non-intersection records are shown separately.</figcaption></figure>
+<figure class="crash-figure"><a aria-label="Enlarge: Recorded injury categories by intersection type" href="../../assets/crash-severity/intersection-severity.png" rel="noopener" target="_blank"><img alt="Recorded injury categories by intersection type" height="1209" loading="lazy" src="../../assets/crash-severity/intersection-severity.png" width="2048"/></a><figcaption><strong>Figure 2.</strong> Four-way and T-intersections dominate the displayed intersection counts; non-intersection records are shown separately.</figcaption></figure>
 <p>The hourly profile showed a pronounced late-afternoon concentration, reaching its maximum at <strong>17:00</strong>. The month–hour heatmap also showed recurring afternoon concentrations. Together, these outputs indicate a persistent time-of-day pattern rather than an isolated monthly peak.</p>
-<figure class="crash-figure"><a href="../../assets/crash-severity/hourly-frequency.png" target="_blank" rel="noopener" aria-label="Enlarge: Recorded crashes by hour of day"><img src="../../assets/crash-severity/hourly-frequency.png" alt="Recorded crashes by hour of day" width="1769" height="1388" loading="lazy"/></a><figcaption><strong>Figure 3.</strong> The hourly distribution peaks at 17:00. Counts describe occurrence in the analysed records, not exposure-adjusted risk.</figcaption></figure>
-<h2>Temporal patterns and operating conditions</h2>
-<figure class="crash-figure"><a href="../../assets/crash-severity/monthly-frequency.png" target="_blank" rel="noopener" aria-label="Enlarge: Monthly crash distribution"><img src="../../assets/crash-severity/monthly-frequency.png" alt="Monthly crash distribution" width="2048" height="1211" loading="lazy"/></a><figcaption><strong>Figure 4. Monthly crash distribution.</strong> Recorded crashes rose from July to an October maximum, then declined through December.</figcaption></figure>
-<figure class="crash-figure"><a href="../../assets/crash-severity/weekly-frequency.png" target="_blank" rel="noopener" aria-label="Enlarge: Weekly crash distribution"><img src="../../assets/crash-severity/weekly-frequency.png" alt="Weekly crash distribution" width="1768" height="1381" loading="lazy"/></a><figcaption><strong>Figure 5. Weekly crash distribution.</strong> Counts increased through the working week and peaked on Friday, with lower volumes on Saturday and Sunday.</figcaption></figure>
-<figure class="crash-figure"><a href="../../assets/crash-severity/month-hour-frequency.png" target="_blank" rel="noopener" aria-label="Enlarge: Crash frequency by month and hour"><img src="../../assets/crash-severity/month-hour-frequency.png" alt="Crash frequency by month and hour" width="2048" height="1469" loading="lazy"/></a><figcaption><strong>Figure 6. Crash frequency by month and hour.</strong> Afternoon concentrations recur across months, supporting closer examination of traffic conditions during the 15:00–18:00 period.</figcaption></figure>
-<figure class="crash-figure"><a href="../../assets/crash-severity/weather-frequency-injuries.png" target="_blank" rel="noopener" aria-label="Enlarge: Weather, crash frequency, and injuries per crash"><img src="../../assets/crash-severity/weather-frequency-injuries.png" alt="Weather, crash frequency, and injuries per crash" width="2047" height="846" loading="lazy"/></a><figcaption><strong>Figure 7. Weather, crash frequency, and injuries per crash.</strong> Clear weather accounted for most recorded crashes; sleet/hail had the highest displayed mean injuries per crash, contrasting occurrence frequency with injury burden per event.</figcaption></figure>
-<h2>Transportation-safety interpretation</h2>
+<figure class="crash-figure"><a aria-label="Enlarge: Recorded crashes by hour of day" href="../../assets/crash-severity/hourly-frequency.png" rel="noopener" target="_blank"><img alt="Recorded crashes by hour of day" height="1388" loading="lazy" src="../../assets/crash-severity/hourly-frequency.png" width="1769"/></a><figcaption><strong>Figure 3.</strong> The hourly distribution peaks at 17:00. Counts describe occurrence in the analysed records, not exposure-adjusted risk.</figcaption></figure>
+<h2 id="section-4">Temporal patterns and operating conditions</h2>
+<figure class="crash-figure"><a aria-label="Enlarge: Monthly crash distribution" href="../../assets/crash-severity/monthly-frequency.png" rel="noopener" target="_blank"><img alt="Monthly crash distribution" height="1211" loading="lazy" src="../../assets/crash-severity/monthly-frequency.png" width="2048"/></a><figcaption><strong>Figure 4. Monthly crash distribution.</strong> Recorded crashes rose from July to an October maximum, then declined through December.</figcaption></figure>
+<figure class="crash-figure"><a aria-label="Enlarge: Weekly crash distribution" href="../../assets/crash-severity/weekly-frequency.png" rel="noopener" target="_blank"><img alt="Weekly crash distribution" height="1381" loading="lazy" src="../../assets/crash-severity/weekly-frequency.png" width="1768"/></a><figcaption><strong>Figure 5. Weekly crash distribution.</strong> Counts increased through the working week and peaked on Friday, with lower volumes on Saturday and Sunday.</figcaption></figure>
+<figure class="crash-figure"><a aria-label="Enlarge: Crash frequency by month and hour" href="../../assets/crash-severity/month-hour-frequency.png" rel="noopener" target="_blank"><img alt="Crash frequency by month and hour" height="1469" loading="lazy" src="../../assets/crash-severity/month-hour-frequency.png" width="2048"/></a><figcaption><strong>Figure 6. Crash frequency by month and hour.</strong> Afternoon concentrations recur across months, supporting closer examination of traffic conditions during the 15:00–18:00 period.</figcaption></figure>
+<figure class="crash-figure"><a aria-label="Enlarge: Weather, crash frequency, and injuries per crash" href="../../assets/crash-severity/weather-frequency-injuries.png" rel="noopener" target="_blank"><img alt="Weather, crash frequency, and injuries per crash" height="846" loading="lazy" src="../../assets/crash-severity/weather-frequency-injuries.png" width="2047"/></a><figcaption><strong>Figure 7. Weather, crash frequency, and injuries per crash.</strong> Clear weather accounted for most recorded crashes; sleet/hail had the highest displayed mean injuries per crash, contrasting occurrence frequency with injury burden per event.</figcaption></figure>
+<h2 id="section-5">Transportation-safety interpretation</h2>
 <p>The analysis distinguishes a severity-focused question—why front-to-front configurations have a more adverse injury profile—from a frequency-focused question—why recorded crashes cluster at particular locations and times. These findings frame subsequent investigation of opposing-direction conflicts, intersection operating conditions, and time-dependent traffic exposure. They support selecting questions for detailed safety assessment, rather than prescribing an intervention from counts alone.</p>
-<nav class="pagination" aria-label="Project navigation"><a href="../../portfolio/">All projects</a> · <a href="../../portfolio/metrobus-accessibility/">Previous</a> · <a href="../../portfolio/m7-motorway/">Next</a></nav>
-</article>
-</main>
-<footer class="page__footer">
-<div style="max-width:1280px;margin:auto;padding:2em 1em">
-<a href="../../sitemap/">Sitemap</a>
-<div class="page__footer-follow">
-<ul class="social-icons">
-<li>
-<strong>Follow:</strong>
-</li>
-<li>
-<a href="https://github.com/assad-hamid">GitHub</a>
-</li>
-<li>
-<a href="mailto:assadhamid98@gmail.com">Email</a>
-</li>
-</ul>
-</div>
-<div class="page__footer-copyright">© 2026 Assad Hamid. Design based on <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/">Minimal Mistakes</a>.</div>
-</div>
-</footer>
-<script defer="" src="../../assets/site.js">
-</script>
-</body>
-</html>
+<nav aria-label="Project navigation" class="pagination"><a href="../../portfolio/">All projects</a> · <a href="../../portfolio/metrobus-accessibility/">Previous</a> · <a href="../../portfolio/m7-motorway/">Next</a></nav>
+</article></main><footer class="site-footer"><div class="site-footer__inner"><nav class="footer-links" aria-label="Footer links"><a href="../../sitemap/">Sitemap</a><a href="https://github.com/assad-hamid" target="_blank" rel="noopener noreferrer">GitHub</a><a href="mailto:assadhamid98@gmail.com">Email</a></nav><p class="footer-copy">© 2026 Assad Hamid</p></div></footer><script defer src="../../assets/editorial.js"></script></body></html>
