@@ -139,3 +139,50 @@ img,svg{max-width:100%} img{height:auto} a{color:inherit} a:focus-visible,button
 @media(max-width:440px){.site-header__inner{align-items:flex-start;flex-direction:column;gap:.7rem}.site-nav{max-width:100%;gap:1.1rem;flex-wrap:wrap}.site-nav a{font-size:.78rem}.site-main{padding-top:2rem}.profile-pic{width:118px;height:118px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 @media print{.site-header,.social-links,.site-footer,.skip-link{display:none!important}body{background:white}.site-main,.site-main--article{max-width:100%;padding:0}.profile-section,.bio-section,.content-section,.page-heading,.article-content{animation:none!important}a{color:var(--ink)!important}}
+
+/* Weather figure — true two-panel layout, no subplot-label collisions. */
+.article-content .weather-figure {
+  width: min(1120px, calc(100vw - 64px));
+  max-width: none;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 2.15rem 0 2.3rem;
+}
+.weather-panels {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 30px;
+}
+.weather-panel {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(24, 18, 14, .035);
+}
+.article-content .weather-panel img {
+  display: block;
+  border: 0;
+  border-radius: 0;
+  width: 100%;
+  height: auto;
+  box-shadow: none;
+  background: #fff;
+}
+.article-content .weather-panel:hover img { box-shadow: none; }
+.weather-panel:hover { box-shadow: 0 7px 28px rgba(24, 18, 14, .095); }
+.article-content .weather-figure > figcaption {
+  max-width: var(--article-measure);
+  margin: .95rem auto 0;
+}
+@media(max-width:980px) {
+  .article-content .weather-figure { width: 100%; }
+  .weather-panels { grid-template-columns: 1fr; gap: 18px; }
+}
+@media print {
+  .article-content .weather-figure { position: static; left: auto; transform: none; width: 100%; }
+  .weather-panels { gap: 12px; }
+}
