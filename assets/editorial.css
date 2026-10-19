@@ -186,3 +186,15 @@ img,svg{max-width:100%} img{height:auto} a{color:inherit} a:focus-visible,button
   .article-content .weather-figure { position: static; left: auto; transform: none; width: 100%; }
   .weather-panels { gap: 12px; }
 }
+
+/* Vision-based pedestrian–vehicle research page: consistent editorial images. */
+.vci-steps{display:flex;flex-wrap:wrap;gap:.38rem .45rem;align-items:center;margin:1.35rem 0 1.55rem;padding:1.05rem 0;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+.vci-steps span{display:inline-block;border:1px solid var(--line);border-radius:100px;padding:.26rem .55rem;background:var(--paper-soft);font-size:.70rem;color:var(--secondary);font-weight:500;line-height:1.55}
+.vci-steps span:not(:last-child)::after{content:'→';margin-left:.52rem;color:var(--accent);font-weight:600}
+.article-content .vci-figure{margin:1.28rem auto 1.7rem}
+.article-content .vci-figure img{aspect-ratio:auto;object-fit:contain;border-radius:5px}
+.vci-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;align-items:start;margin:1.4rem 0 2rem}
+.vci-pair .vci-figure{margin:0}
+.vci-pair .vci-figure figcaption{margin-top:.5rem}
+.vci-article .pagination{margin-top:2.25rem}
+@media(max-width:650px){.vci-pair{grid-template-columns:1fr;gap:1.45rem}.vci-steps{row-gap:.45rem}.vci-steps span:not(:last-child)::after{display:none}}
