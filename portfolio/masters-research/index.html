@@ -4,9 +4,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="A research brief on trajectory-based analysis of pedestrian–vehicle conflict severity, predictive modelling, matched temporal comparisons and behavioural assessment." name="description"/>
+<meta content="Research brief on predictive modelling and temporal characterization of pedestrian–vehicle conflict severity from naturalistic trajectories." name="description"/>
 <meta content="#fdfcfa" name="theme-color"/>
-<title>Trajectory-Based Analysis of Pedestrian–Vehicle Conflict Severity | Assad Hamid</title>
+<title>Predictive Modelling and Temporal Characterization of Pedestrian–Vehicle Conflict Severity | Assad Hamid</title>
 <link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
 <link href="../../assets/editorial.css" rel="stylesheet"/>
 <script defer="" src="../../assets/editorial.js"></script>
@@ -18,10 +18,10 @@
 <div class="page-heading">
 <div class="breadcrumb"><a href="../../portfolio/">Projects</a> / <span>Master’s Research</span></div>
 <p class="page-kicker">Master’s research · Transportation safety</p>
-<h1 class="page-title">Trajectory-Based Analysis of Pedestrian–Vehicle Conflict Severity</h1>
+<h1 class="page-title">Predictive Modelling and Temporal Characterization of Pedestrian–Vehicle Conflict Severity</h1>
 </div>
 <article class="article-content masters-research-article">
-<p class="study-lead">Critical pedestrian–vehicle interactions are investigated through their developing trajectories: where severity-related information is concentrated, when differences become distinguishable, and how those differences are expressed in road-user behaviour.</p>
+<p class="study-lead">This research examines where predictive information about pedestrian–vehicle conflict severity is concentrated, when Critical and Normal trajectories become statistically distinguishable, and how these differences manifest in observable road-user behaviour.</p>
 <h2 id="research-basis">Research basis</h2>
 <p>Naturalistic drone trajectories from four unsignalized intersections in Germany were obtained from the <strong>inD</strong> and <strong>DeepScenario Open 3D</strong> datasets. Road-user trajectories were harmonized to a common spatial and temporal representation, and pedestrian–vehicle encounters were reconstructed from overlapping movement paths. Each focal interaction was referenced to its conflict location and characterized using <strong>post-encroachment time (PET)</strong> and <strong>minimum time-to-collision (mTTC)</strong>, with the two measures jointly defining the severity outcome.</p>
 <p>Recording-level data partitions and strictly pre-conflict observation windows were established for predictive evaluation, so that related encounters and information from later in the interaction were not used to characterize its earlier state.</p>
@@ -30,7 +30,8 @@
 <figcaption>Conflict locations derived from the observed pedestrian–vehicle trajectories. Their spatial pattern reflects the geometry and crossing movements of each intersection.</figcaption>
 </figure>
 <h2 id="predictive-modelling">Predictive modelling</h2>
-<p>The predictive assessment holds the severity target, analytical population and evaluation partitions fixed while progressively changing the information available to the models. Linear and nonlinear focal-pair summaries are compared with ordered trajectory sequences and scene-level representations that include surrounding road users. The comparison examines not only discrimination of Critical interactions but also whether added temporal and contextual information contributes beyond the focal pair.</p>
+<p>The predictive analysis investigates how different representations of pedestrian–vehicle interactions influence conflict-severity prediction. A controlled modelling framework is established using consistent severity labels, pre-conflict observation windows, and recording-level data partitions. Five modelling approaches are evaluated: a prevalence-based reference, <strong>Logistic Regression</strong>, <strong>Gradient Boosting</strong>, a <strong>Gated Recurrent Unit (GRU)</strong> network, and a <strong>GATv2–GRU graph-attention model</strong>.</p>
+<p>Logistic Regression and Gradient Boosting evaluate linear and nonlinear relationships within focal-pair kinematic features. The GRU examines whether preserving the temporal sequence provides additional predictive information, while GATv2–GRU incorporates surrounding road users through a dynamic interaction graph. A separate context-ablation comparison examines the incremental contribution of surrounding traffic under the same graph architecture. Predictive performance is compared on a common held-out dataset to determine where the strongest discriminative information resides.</p>
 <p>The clearest predictive separation is obtained from <strong>nonlinear relationships in focal-pair kinematics</strong>. More elaborate sequence and scene representations do not establish a consistently supported incremental advantage under the evaluated conditions. This distinction is assessed on the same held-out encounters rather than inferred from differences in model complexity.</p>
 <figure class="masters-figure masters-figure--wide">
 <a aria-label="Open predictive-model comparison plot at full resolution" href="../../assets/masters-research/predictive-model-comparison.webp" rel="noopener noreferrer" target="_blank"><img alt="Bar chart comparing predictive discrimination across progressively richer focal-pair and scene representations, with uncertainty intervals." height="930" loading="lazy" src="../../assets/masters-research/predictive-model-comparison.webp" width="2214"/></a>
