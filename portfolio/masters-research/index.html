@@ -1,54 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta name="description" content="A research brief on trajectory-based analysis of pedestrian–vehicle conflict severity, predictive modelling, matched temporal comparisons and behavioural assessment."/>
-<meta name="theme-color" content="#fdfcfa"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A research brief on trajectory-based analysis of pedestrian–vehicle conflict severity, predictive modelling, matched temporal comparisons and behavioural assessment." name="description"/>
+<meta content="#fdfcfa" name="theme-color"/>
 <title>Trajectory-Based Analysis of Pedestrian–Vehicle Conflict Severity | Assad Hamid</title>
-<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg"/>
-<link rel="stylesheet" href="../../assets/editorial.css"/>
-<script src="../../assets/editorial.js" defer></script>
+<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../../assets/editorial.css" rel="stylesheet"/>
+<script defer="" src="../../assets/editorial.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#content">Skip to content</a>
 <header class="site-header"><div class="site-header__inner"><a class="site-brand" href="../../index.html">Assad Hamid</a><nav aria-label="Main navigation" class="site-nav"><a href="../../index.html">Résumé</a><a aria-current="page" href="../../portfolio/">Projects</a></nav></div></header>
 <main class="site-main site-main--article" id="content">
 <div class="page-heading">
-  <div class="breadcrumb"><a href="../../portfolio/">Projects</a> / <span>Master’s Research</span></div>
-  <p class="page-kicker">Master’s research · Transportation safety</p>
-  <h1 class="page-title">Trajectory-Based Analysis of Pedestrian–Vehicle Conflict Severity</h1>
+<div class="breadcrumb"><a href="../../portfolio/">Projects</a> / <span>Master’s Research</span></div>
+<p class="page-kicker">Master’s research · Transportation safety</p>
+<h1 class="page-title">Trajectory-Based Analysis of Pedestrian–Vehicle Conflict Severity</h1>
 </div>
 <article class="article-content masters-research-article">
-  <p class="meta">Dalian University of Technology · Transportation Planning and Management · Research in progress</p>
-  <p class="study-lead">How does the severity of a pedestrian–vehicle encounter become distinguishable before the conflict is realized—and what part of that distinction is carried by the interacting pair rather than the surrounding traffic?</p>
-
-  <h2 id="research-focus">Research focus</h2>
-  <p>Pedestrian–vehicle safety at unsignalized intersections is often evaluated through crash records or event-level surrogate measures. These indicators are useful for identifying critical encounters, but provide a limited account of <em>how</em> risk-related motion develops. This research examines conflict severity as a trajectory-based phenomenon, bringing together predictive modelling, comparable-case analysis and the study of observable road-user responses.</p>
-  <p>Naturalistic drone trajectories from four unsignalized intersections in Germany, drawn from the <strong>inD</strong> and <strong>DeepScenario Open 3D</strong> datasets, are harmonized into a common spatial and temporal representation. The fundamental unit of analysis is a pedestrian–vehicle interaction rather than an individual track. Interactions are located around their shared conflict geometry and characterized with complementary surrogate safety measures—<strong>post-encroachment time (PET)</strong> and <strong>minimum time-to-collision (mTTC)</strong>—to distinguish critical from normal encounters.</p>
-
-  <div class="research-journey" aria-label="Research methodology overview">
-    <span>Trajectory harmonization</span>
-    <span>Interaction severity</span>
-    <span>Predictive information</span>
-    <span>Matched temporal comparison</span>
-    <span>Behavioural assessment</span>
-  </div>
-
-  <h2 id="analytical-approach">Analytical approach</h2>
-  <p>With a common event catalogue established, the investigation first asks <strong>where useful predictive information resides</strong>. A controlled set of models progressively considers focal-pair motion summaries, nonlinear relationships, ordered trajectory sequences and representations of the wider traffic scene. These alternatives are compared on consistent targets and recording-separated evaluation data, with attention to class imbalance and the risk of incorporating future information into prediction. This design distinguishes improvements attributable to accessible information from changes caused merely by model complexity.</p>
-  <p>Prediction alone cannot establish when critical and normal encounters start to differ. The analysis therefore proceeds to a <strong>matched case–control comparison</strong>, pairing critical interactions with normal encounters having comparable measured approach conditions. A multivariate matching design considers interaction geometry, vehicle approach speed and relative arrival timing, while remaining differences in entry timing are carried forward for statistical adjustment. The matched encounters are subsequently aligned to a common conflict-relative time reference.</p>
-  <p><strong>Spline-based linear mixed-effects models</strong> are applied to the resulting case–control difference trajectories to examine nonlinear changes in vehicle motion, pedestrian motion and the surrounding traffic context. The models accommodate repeated temporal observations; bootstrap-based simultaneous inference and multiplicity-aware comparisons assess which differences are supported across the observation window, rather than at isolated frames. Reserved matched encounters and sensitivity analyses provide complementary checks on the resulting temporal interpretation.</p>
-  <p>Finally, a <strong>severity-stratified behavioural assessment</strong> returns to the broader interaction catalogue. Vehicle approach speed, deceleration, yielding and evasive manoeuvres are examined alongside pedestrian speed and directional responses. This places the time-resolved findings within a more interpretable behavioural account of how road users respond under differing levels of conflict severity.</p>
-
-  <h2 id="emerging-evidence">Emerging evidence</h2>
-  <p>The predictive comparisons indicate that nonlinear relationships within the focal pedestrian–vehicle pair contain substantial severity-related information; more elaborate temporal and scene representations do not demonstrate a correspondingly reliable incremental improvement under the evaluated conditions. This finding concerns the tested representations and data, not the absence of any possible contextual influence.</p>
-  <p>The matched temporal analysis identifies an ordered kinematic pattern: more critical encounters exhibit greater vehicle approach speed and faster pair convergence within the observable pre-conflict interval, while a comparatively stronger deceleration difference appears later. The measured surrounding-context variables do not show an independently supported temporal signature under the specified analysis. Complementary behavioural comparisons associate more severe interactions particularly with vehicle-side motion and response characteristics; pedestrian-side distinctions are less uniform.</p>
-
-  <h2 id="contribution">Research contribution and scope</h2>
-  <p>The work links three questions that are often treated separately: <strong>what predicts interaction severity, when comparable encounters become distinguishable, and how that distinction is expressed in road-user behaviour</strong>. Its contribution is an integrated analytical perspective that moves beyond event classification toward a statistically qualified account of conflict development, without assuming that more complex models necessarily provide more usable safety information.</p>
-  <p class="research-disclaimer">This is an overview of ongoing, unpublished Master’s research. Reported interpretations are observational and specific to the studied intersections, trajectory coverage and implemented measures; they should not be read as causal estimates, prospective collision-warning performance or evidence of general applicability across all traffic settings.</p>
-  <nav class="pagination" aria-label="Project navigation"><a href="../../portfolio/">← All projects</a><span aria-hidden="true">·</span><a href="../pedestrian-vehicle-conflict/">Related computer-vision project →</a></nav>
+<p class="study-lead">Critical pedestrian–vehicle interactions are investigated through their developing trajectories: where severity-related information is concentrated, when differences become distinguishable, and how those differences are expressed in road-user behaviour.</p>
+<h2 id="research-basis">Research basis</h2>
+<p>Naturalistic drone trajectories from four unsignalized intersections in Germany were obtained from the <strong>inD</strong> and <strong>DeepScenario Open 3D</strong> datasets. Road-user trajectories were harmonized to a common spatial and temporal representation, and pedestrian–vehicle encounters were reconstructed from overlapping movement paths. Each focal interaction was referenced to its conflict location and characterized using <strong>post-encroachment time (PET)</strong> and <strong>minimum time-to-collision (mTTC)</strong>, with the two measures jointly defining the severity outcome.</p>
+<p>Recording-level data partitions and strictly pre-conflict observation windows were established for predictive evaluation, so that related encounters and information from later in the interaction were not used to characterize its earlier state.</p>
+<figure class="masters-figure">
+<a aria-label="Open conflict-location figure at full resolution" href="../../assets/masters-research/conflict-locations.webp" rel="noopener noreferrer" target="_blank"><img alt="Maps of four unsignalized intersections with extracted pedestrian–vehicle trajectories and conflict locations." height="851" loading="lazy" src="../../assets/masters-research/conflict-locations.webp" width="1512"/></a>
+<figcaption>Conflict locations derived from the observed pedestrian–vehicle trajectories. Their spatial pattern reflects the geometry and crossing movements of each intersection.</figcaption>
+</figure>
+<h2 id="predictive-modelling">Predictive modelling</h2>
+<p>The predictive assessment holds the severity target, analytical population and evaluation partitions fixed while progressively changing the information available to the models. Linear and nonlinear focal-pair summaries are compared with ordered trajectory sequences and scene-level representations that include surrounding road users. The comparison examines not only discrimination of Critical interactions but also whether added temporal and contextual information contributes beyond the focal pair.</p>
+<p>The clearest predictive separation is obtained from <strong>nonlinear relationships in focal-pair kinematics</strong>. More elaborate sequence and scene representations do not establish a consistently supported incremental advantage under the evaluated conditions. This distinction is assessed on the same held-out encounters rather than inferred from differences in model complexity.</p>
+<figure class="masters-figure masters-figure--wide">
+<a aria-label="Open predictive-model comparison plot at full resolution" href="../../assets/masters-research/predictive-model-comparison.webp" rel="noopener noreferrer" target="_blank"><img alt="Bar chart comparing predictive discrimination across progressively richer focal-pair and scene representations, with uncertainty intervals." height="930" loading="lazy" src="../../assets/masters-research/predictive-model-comparison.webp" width="2214"/></a>
+<figcaption>Comparative predictive performance under a common held-out evaluation. Increasing representation complexity does not produce a uniform improvement.</figcaption>
+</figure>
+<h2 id="matched-trajectory-analysis">Matched temporal comparison</h2>
+<p>Predictive performance identifies useful information but does not establish <em>when</em> the underlying motion patterns become distinguishable. Critical encounters were therefore paired with Normal close calls under comparable measured approach conditions. The matched design accounts for approach geometry, vehicle speed and relative entry timing, with remaining entry-timing differences carried into the temporal analysis as an explicit adjustment.</p>
+<p>Trajectories were aligned by conflict-point passage and analyzed through <strong>spline-based linear mixed-effects models</strong>. Matched-set contrasts preserve the evolution of vehicle and pedestrian motion over time, while simultaneous confidence bands and multiplicity-aware inference distinguish supported differences from isolated fluctuations. Sensitivity checks and reserved matched encounters were used to examine the consistency of the temporal findings.</p>
+<p>Within the supported observation window, Critical encounters show greater vehicle approach speed and faster pedestrian–vehicle convergence, followed by a later relative deceleration response. The measured surrounding-traffic variables do not exhibit a correspondingly supported temporal signature under the same inferential framework.</p>
+<figure class="masters-figure masters-figure--wide">
+<a aria-label="Open matched temporal comparison figure at full resolution" href="../../assets/masters-research/temporal-kinematic-contrasts.webp" rel="noopener noreferrer" target="_blank"><img alt="Adjusted Critical-versus-Normal focal-pair kinematic trajectories with simultaneous confidence bands across the pre-conflict interval." height="1358" loading="lazy" src="../../assets/masters-research/temporal-kinematic-contrasts.webp" width="2616"/></a>
+<figcaption>Adjusted matched contrasts across the pre-conflict interval. The trajectories distinguish approach dynamics from the subsequent vehicle response; shaded regions represent simultaneous uncertainty.</figcaption>
+</figure>
+<h2 id="behavioural-analysis">Behavioural interpretation</h2>
+<p>The wider encounter catalogue is subsequently examined across ordered severity groups to connect the statistical contrasts with observable road-user actions. Vehicle approach speed, deceleration, yielding and evasive manoeuvres are assessed alongside pedestrian speed and directional adjustments. The stronger and more consistent severity-related associations are found in <strong>vehicle-side approach and response behaviour</strong>, whereas the measured pedestrian responses show less uniform differentiation.</p>
+<figure class="masters-figure masters-figure--wide">
+<a aria-label="Open vehicle-speed behaviour plot at full resolution" href="../../assets/masters-research/vehicle-speed-severity.webp" rel="noopener noreferrer" target="_blank"><img alt="Vehicle approach-speed estimates compared across ordered pedestrian–vehicle severity groups for the inD and Stuttgart datasets." height="1366" loading="lazy" src="../../assets/masters-research/vehicle-speed-severity.webp" width="4642"/></a>
+<figcaption>Vehicle approach speed across severity groups and observation sources. The contrast is clearest between the more critical and less critical encounters; intermediate groups are not strictly monotonic.</figcaption>
+</figure>
+<h2 id="research-contribution">Research contribution</h2>
+<p>Integrating controlled predictive evaluation, matched time-resolved comparison and behavioural assessment connects three complementary aspects of pedestrian–vehicle safety: <strong>where discriminating information lies, how early kinematic differences are observable, and which road-user responses accompany severity</strong>. This provides a continuous analytical account from observed trajectories to interpretable conflict behaviour, while keeping the conclusions specific to the measured encounters and supported comparisons.</p>
+<nav aria-label="Project navigation" class="pagination"><a href="../../portfolio/">← All projects</a><span aria-hidden="true">·</span><a href="../pedestrian-vehicle-conflict/">Related computer-vision project →</a></nav>
 </article>
 </main>
 <footer class="site-footer"><div class="site-footer__inner"><nav aria-label="Footer links" class="footer-links"><a href="../../sitemap/">Sitemap</a><a href="https://github.com/assad-hamid" rel="noopener noreferrer" target="_blank">GitHub</a><a href="mailto:assadhamid98@gmail.com">Email</a></nav><p class="footer-copy">© 2026 Assad Hamid</p></div></footer>

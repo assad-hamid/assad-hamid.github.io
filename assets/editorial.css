@@ -209,5 +209,14 @@ img,svg{max-width:100%} img{height:auto} a{color:inherit} a:focus-visible,button
 .masters-research-article .research-journey{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.32rem;margin:2rem 0 1.85rem;padding:.95rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .masters-research-article .research-journey span{position:relative;font-size:.72rem;line-height:1.48;font-weight:500;color:var(--secondary);padding:.5rem .47rem .5rem .1rem;min-width:0}
 .masters-research-article .research-journey span:not(:last-child)::after{content:'→';position:absolute;right:-.07rem;top:.47rem;color:var(--accent);font-size:.9rem}
-.masters-research-article .research-disclaimer{margin:2rem 0 0!important;padding:1rem 1.15rem;border-left:2px solid var(--line);background:var(--paper-soft);font-size:.82rem!important;color:var(--muted)!important;line-height:1.72!important}
+
 @media(max-width:700px){.masters-research-article .research-journey{grid-template-columns:1fr;gap:0;padding:.65rem 0}.masters-research-article .research-journey span{padding:.56rem 1.2rem .56rem .3rem;border-bottom:1px solid var(--line-soft)}.masters-research-article .research-journey span:last-child{border-bottom:0}.masters-research-article .research-journey span:not(:last-child)::after{content:'↓';top:50%;transform:translateY(-50%);right:.4rem}}
+
+/* Master's research: source figures are full-size and can be opened for detailed inspection. */
+.article-content .masters-figure {margin:1.65rem 0 2.45rem;width:100%;max-width:100%;}
+.article-content .masters-figure--wide {width:min(980px, calc(100vw - 64px));max-width:none;position:relative;left:50%;transform:translateX(-50%);}
+.article-content .masters-figure a {display:block;cursor:zoom-in;outline-offset:4px}
+.article-content .masters-figure img {display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:5px;background:#fff;box-shadow:0 5px 22px rgba(35,30,26,.035);}
+.article-content .masters-figure figcaption {max-width:var(--article-measure);font-size:.77rem;line-height:1.65;color:var(--muted);margin:.66rem auto 0;letter-spacing:0}
+@media(max-width:1010px) {.article-content .masters-figure--wide{width:100%;left:auto;transform:none}}
+@media print {.article-content .masters-figure--wide{width:100%;left:auto;transform:none;page-break-inside:avoid}}
