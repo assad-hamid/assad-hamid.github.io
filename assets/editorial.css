@@ -218,3 +218,22 @@ img,svg{max-width:100%} img{height:auto} a{color:inherit} a:focus-visible,button
 .article-content .masters-figure figcaption {max-width:var(--article-measure);font-size:.77rem;line-height:1.65;color:var(--muted);margin:.66rem auto 0;letter-spacing:0}
 @media(max-width:1010px) {.article-content .masters-figure--wide{width:100%;left:auto;transform:none}}
 @media print {.article-content .masters-figure--wide{width:100%;left:auto;transform:none;page-break-inside:avoid}}
+
+/* Left-hand technical index for detailed project pages. The report's reading width
+   is unchanged; the rail occupies only the outer margin on wide screens. */
+.project-heading-with-tools{position:relative;margin:0 0 2.15rem}
+.project-heading-with-tools>.page-heading{margin:0}
+.project-tech-rail{position:absolute;top:3.55rem;right:calc(100% + 33px);width:174px;border-left:1px solid var(--line);padding:.1rem 0 .1rem 1rem;color:var(--secondary)}
+.project-tech-label{font-size:.67rem;line-height:1.5;font-weight:600;color:var(--accent);letter-spacing:.095em;text-transform:uppercase;margin:0 0 .7rem}
+.project-tech-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.65rem}
+.project-tech-list li{color:var(--secondary);font-family:var(--sans);font-size:.75rem;line-height:1.5;overflow-wrap:break-word}
+.project-tech-list li::before{content:'–';color:#bbafa5;margin-right:.42rem}
+@media(max-width:1180px){
+  .project-tech-rail{position:static;width:auto;margin-top:1.1rem;max-width:100%;border-left:2px solid var(--line);padding:.15rem 0 .15rem .85rem}
+  .project-heading-with-tools{display:flex;flex-direction:column}
+  .project-heading-with-tools>.page-heading{order:0}
+  .project-tech-rail{order:1}
+  .project-tech-list{display:flex;flex-direction:row;flex-wrap:wrap;gap:.4rem 1rem}
+  .project-tech-list li{font-size:.73rem}
+}
+@media print{.project-tech-rail{position:static!important;width:auto!important;margin:.5rem 0 1rem!important}}
